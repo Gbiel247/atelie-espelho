@@ -1,5 +1,7 @@
 const express = require('express');
 const routes = require('./app/routes/routes.js');
+const path = require('path');
+
 
 const app = express();
 const port = 5000;
@@ -14,7 +16,10 @@ app.use(
   express.static(path.join(__dirname, "node_modules/bootstrap/dist"))
 );
 
-routes(app);
+routes.home(app);
+routes.login(app);
+routes.servicos(app);
+routes.adm(app);
 
 app.listen(port, function () {
     console.log('Servidor rodando na porta: ', port);

@@ -49,3 +49,10 @@ CREATE TABLE ItensPedido (
     FOREIGN KEY (Pedido_ID) REFERENCES Pedido(Pedido_ID) ON DELETE CASCADE,
     FOREIGN KEY (Servico_ID) REFERENCES Servicos(Servico_ID) ON DELETE RESTRICT
 );
+
+INSERT INTO Clientes (Nome, Endereco, Email, Sexo, Telefone) VALUES
+('Ana Clara Souza', 'Rua das Flores, 123, São Paulo, SP', 'ana.souza@email.com', 'Feminino', '(11) 98765-4321'),
+('Bruno Costa', 'Avenida Principal, 456, Rio de Janeiro, RJ', 'bruno.costa@email.com', 'Masculino', '(21) 91234-5678'),
+('Carla Dias', 'Praça da Matriz, 789, Belo Horizonte, MG', 'carla.dias@email.com', 'Feminino', '(31) 99988-7766'),
+('Daniel Oliveira', 'Rua dos Pinheiros, 101, Curitiba, PR', 'daniel.oliveira@email.com', 'Masculino', '(41) 98877-6655'),
+('Eliane Faria', 'Set   or Comercial Sul, Quadra 2, Brasília, DF', 'eliane.faria@email.com', 'Feminino', '(61) 98765-1234');

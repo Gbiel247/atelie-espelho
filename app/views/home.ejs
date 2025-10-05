@@ -6,11 +6,28 @@
     <title>Meu Site</title>
     <link rel="stylesheet" href="/style.css">
 </head>
-    <%- include('partials/header', {titulo: 'Página Home'}) %>
+<%- include('partials/header', {titulo: 'Página Home'}) %>
 <body>
     <main>
-        <h1>Home atelie</h1>
-    </main>
+        <h1>Home Ateliê</h1>
+        
+        <hr>
 
+        <h2>Nossos Clientes</h2>
+        
+        <% if (typeof clientes !== 'undefined' && clientes.length > 0) { %>
+            <ul>
+                <% clientes.forEach(function(cliente) { %>
+                    <li>
+                        <strong>Nome:</strong> <%= cliente.Nome %> | 
+                        <strong>Email:</strong> <%= cliente.Email %>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>Nenhum cliente cadastrado no momento.</p>
+        <% } %>
+
+    </main>
 </body>
 </html>
